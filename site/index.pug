@@ -45,7 +45,7 @@ html(lang='en')
         header.masthead.bg-primary.text-white.text-center
             .container.d-flex.align-items-center.flex-column
                 // Masthead Avatar Image
-                img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='...')
+                img.rounded-circle.masthead-avatar.mb-5(src='assets/img/profile.png', alt='...')
                 // Masthead Heading
                 h1.masthead-heading.text-uppercase.mb-0 Start Bootstrap
                 // Icon Divider
@@ -55,7 +55,7 @@ html(lang='en')
                         i.fas.fa-star
                     .divider-custom-line
                 // Masthead Subheading
-                p.masthead-subheading.font-weight-light.mb-0 Graphic Artist - Web Designer - Illustrator
+                p.masthead-subheading.font-weight-light.mb-0 Software Developer
 
         // Portfolio Section
         section#portfolio.page-section.portfolio
@@ -71,29 +71,7 @@ html(lang='en')
                 include /portfolio-grid.pug
 
         // About Section
-        section#about.page-section.bg-primary.text-white.mb-0
-            .container
-                // About Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-white About
-                // Icon Divider
-                .divider-custom.divider-light
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // About Section Content
-                .row
-                    .col-lg-4.ms-auto
-                        p.lead
-                            | Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
-                    .col-lg-4.me-auto
-                        p.lead
-                            | You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!
-                // About Section Button
-                .text-center.mt-4
-                    a.btn.btn-xl.btn-outline-light(href='https://startbootstrap.com/theme/freelancer/')
-                        i.fas.fa-download.me-2
-                        | Free Download!
+        include /about.pug
 
         // Contact Section
         section#contact.page-section
@@ -106,9 +84,17 @@ html(lang='en')
                     .divider-custom-icon
                         i.fas.fa-star
                     .divider-custom-line
+                
+                div
+                    p.text-center
+                        strong
+                            i.fa.fa-fw.fa-envelope
+                            | Email Address: 
+
+                        | daniel.hajjar16@gmail.com
                 // Contact Section Form
-                .row.justify-content-center
-                    .col-lg-8.col-xl-7
+                //.row.justify-content-center
+                    //.col-lg-8.col-xl-7
 
                         // * * * * * * * * * * * * * * *
                         // * * SB Forms Contact Form * *
@@ -196,35 +182,24 @@ html(lang='en')
             .container
                 .row
                     // Footer Location
-                    .col-lg-4.mb-5.mb-lg-0
+                    .col-md-6.mb-5.mb-lg-0
                         h4.text-uppercase.mb-4 Location
                         p.lead.mb-0
-                            | 2215 John Daniel Drive
-                            br
-                            | Clark, MO 65243
+                            | Uppsala, Sweden
                     // Footer Social Icons
-                    .col-lg-4.mb-5.mb-lg-0
+                    .col-md-6.mb-5.mb-lg-0
                         h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
+                        a.btn.btn-outline-light.btn-social.mx-1(href='https://github.com/DanTGL')
+                            i.fab.fa-fw.fa-github
+                        a.btn.btn-outline-light.btn-social.mx-1(href='https://www.linkedin.com/in/daniel-hajjar')
                             i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-dribbble
                     // Footer About Text
-                    .col-lg-4
+                    //.col-lg-4
                         h4.text-uppercase.mb-4 About Freelancer
                         p.lead.mb-0
                             | Freelance is a free to use, MIT licensed Bootstrap theme created by 
                             a(href='http://startbootstrap.com') Start Bootstrap
                             | .
-
-        // Copyright Section
-        div.copyright.py-4.text-center.text-white
-            .container
-                small Copyright &copy; Your Website 2023
 
         // Portfolio Modals
         include /portfolio-modals.pug
@@ -240,4 +215,4 @@ html(lang='en')
         // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
+        //script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
