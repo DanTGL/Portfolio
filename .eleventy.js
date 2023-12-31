@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addTemplateFormats("scss", "pug");
   
   eleventyConfig.addPassthroughCopy("site/assets");
+  eleventyConfig.addPassthroughCopy("site/js");
+
 
   // Creates the extension for use
   eleventyConfig.addExtension("scss", {
